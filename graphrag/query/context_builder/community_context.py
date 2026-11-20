@@ -47,7 +47,7 @@ def build_community_context(
     """
 
     def _is_included(report: CommunityReport) -> bool:
-        return report.rank is not None and report.rank >= min_community_rank
+        return report.rank is not None and report.rank > min_community_rank
 
     def _get_header(attributes: list[str]) -> list[str]:
         header = ["id", "title"]
